@@ -23,4 +23,9 @@ class ComicController extends Controller
 
         return view('/comics.show', compact('comics'));
     }
+
+    public function create(){
+        return view('comics.create');
+    }
+    
 }
