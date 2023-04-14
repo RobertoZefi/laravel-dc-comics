@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+@import './partials/index.scss';
+
+@import './partials/show.scss';
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
