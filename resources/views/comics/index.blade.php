@@ -15,6 +15,8 @@
                     <p>{{ $comic->series }}</p>
                     <p>{{ $comic->sale_date }}</p>
                     <p>{{ $comic->type }}</p>
+
+                    <a class="btn btn-primary button" href="{{ route('comics.edit', $comic) }}">Modifica</a>
                 </div>
             </a>
         @endforeach
