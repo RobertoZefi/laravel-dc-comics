@@ -15,8 +15,8 @@
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="title" value="{{ $comic['title'] }}">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Descrizione</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" value="{{ $comic['description'] }}"></textarea>
+            <label for="exampleFormControlInput1" class="form-label">Descrizione</label>
+          <input type="description" class="form-control" id="exampleFormControlInput1" placeholder="" name="description" value="{{ $comic['description'] }}">
         </div>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Immagine</label>

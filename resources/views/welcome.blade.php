@@ -16,7 +16,9 @@
 </head>
 
 <body>
-
+    <header class="text-center py-3">
+        <a href="{{ route('comics.index') }}" class="my-3 fs-3">Tutti i comics</a>
+    </header>
     <main class="bg-light">
         @yield('content')
     </main>
