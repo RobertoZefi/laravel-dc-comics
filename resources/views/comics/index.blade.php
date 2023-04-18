@@ -18,7 +18,7 @@
                         <p>{{ $comic->type }}</p>
     
                         <a class="btn btn-primary button mx-auto" href="{{ route('comics.edit', $comic) }}">Modifica</a>
-                        <form action="{{ route('comics.destroy', $comic) }}" metod="POST">
+                        <form action="{{ route('comics.destroy', $comic) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <input type="submit" value="Elimina">
