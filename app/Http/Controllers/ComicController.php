@@ -34,22 +34,25 @@ class ComicController extends Controller
             'title' => 'required|max:255|min:2',
             'description' => 'required|string|min:2',
             'thumb' => 'required|url',
-            'price' => 'required|decimal:2',
+            'price' => 'required|numeric',
             'series' => 'required|max:150|min:2',
             'sale_date' => 'required|date',
             'type' => 'required|max:100|min:2'
         ]);
 
-        $new_comic = new Comic;
-        $new_comic->title = $data['title'];
+        //$new_comic = new Comic;
+
+        $new_comic = Comic::create($data);
+
+        /*$new_comic->title = $data['title'];
         $new_comic->description = $data['description'];
         $new_comic->thumb = $data['thumb'];
         $new_comic->price = $data['price'];
         $new_comic->series = $data['series'];
         $new_comic->sale_date = $data['sale_date'];
-        $new_comic->type = $data['type'];
+        $new_comic->type = $data['type'];*/
 
-        $new_comic->save();
+        //$new_comic->save();
 
         return to_route('comics.show', $new_comic);
     }
@@ -63,21 +66,23 @@ class ComicController extends Controller
             'title' => 'required|max:255|min:2',
             'description' => 'required|string|min:2',
             'thumb' => 'required|url',
-            'price' => 'required|decimal:2',
+            'price' => 'required|numeric',
             'series' => 'required|max:150|min:2',
             'sale_date' => 'required|date',
             'type' => 'required|max:100|min:2'
         ]);
+
+        $comic->update($data);
         
-        $comic->title = $data['title'];
+        /*$comic->title = $data['title'];
         $comic->description = $data['description'];
         $comic->thumb = $data['thumb'];
         $comic->price = $data['price'];
         $comic->series = $data['series'];
         $comic->sale_date = $data['sale_date'];
-        $comic->type = $data['type'];
+        $comic->type = $data['type'];*/
 
-        $comic->save();
+        //$comic->save();
 
         return to_route('comics.show', $comic);
     }
